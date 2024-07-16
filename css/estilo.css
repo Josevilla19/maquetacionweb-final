@@ -1,0 +1,280 @@
+/* estilo.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.main {
+    width: 100%;
+}
+
+.section-1 {
+    width: 100%;
+    height: 10em;
+    background: linear-gradient(50deg, darkred, white);
+    padding-top: 3em;
+}
+
+.header {
+    background-color: black;
+    width: 100%;
+    height: 3.9em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.img {
+    width: 25%;
+    height: 100%;
+}
+
+.menu {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.img img {
+    object-fit: cover;
+    height: 100%;
+}
+
+.menu a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 1em 2em;
+}
+
+.menu a:hover {
+    background-color: darkred;
+}
+
+.section-2 {
+    width: 100%;
+    padding: 3em 0;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.s2-texto h1 {
+    font-size: 36px;
+}
+
+.s2-texto hr {
+    width: 50px;
+    border: 2px solid red;
+}
+
+.s2-texto p {
+    font-size: 18px;
+    color: #555;
+}
+
+.s2-img {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.s2-contenido {
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 30%;
+    padding: 20px;
+    text-align: left;
+}
+
+.s2-contenido img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.s2-contenido h2 {
+    font-size: 24px;
+    color: #ff5500;
+    margin-top: 15px;
+}
+
+.s2-contenido p {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+.s2-contenido a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5500;
+    color: white;
+    text-decoration: none;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.section-3 {
+    background-color: #2d2f3e;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.section-3 img {
+    width: 50px;
+}
+
+.section-3 h3 {
+    margin: 10px 0;
+}
+
+.section-3 a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#subir-arriba-btn {
+    display: none; /* Ocultar por defecto */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #ff5500;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 99; /* Asegura que esté sobre otros elementos */
+}
+
+/* Estilos para las imágenes de las armas */
+.s2-contenido img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out; /* Animación suave */
+}
+
+/* Efecto de escala al pasar el mouse */
+.s2-contenido img:hover {
+    transform: scale(1.05);
+}
+
+/* Estilos para la animación al pasar el mouse sobre los botones de comprar */
+.s2-contenido a:hover {
+    transform: scale(1.1); /* Escalar ligeramente el botón al pasar el mouse */
+    background-color: #ff7733; /* Cambiar el color de fondo */
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out; /* Transiciones suaves */
+}
+
+
+@media screen and (max-width: 768px) {
+    .img {
+        width: 50%;
+    }
+    
+    .menu {
+        width: 80%;
+        justify-content: center;
+    }
+
+    .s2-contenido {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .s2-img {
+        padding: 10px;
+    }
+
+    .s2-texto h1 {
+        font-size: 28px;
+    }
+
+    .s2-contenido h2 {
+        font-size: 20px;
+    }
+
+    .s2-contenido p {
+        font-size: 14px;
+    }
+}
+
+.menu-toggle {
+    display: none; /* Ocultar por defecto en pantallas grandes */
+    cursor: pointer;
+    padding: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.menu-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.menu-links a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding: 1em 2em;
+}
+
+.menu-links a:hover {
+    background-color: darkred;
+}
+
+/* Media query para dispositivos móviles */
+
+@media screen and (max-width: 768px) {
+    .img {
+        width: 50%;
+    }
+
+    .menu {
+        width: 80%;
+        justify-content: center;
+    }
+
+    .menu-toggle {
+        display: block; /* Mostrar el botón hamburguesa en dispositivos móviles */
+    }
+
+    .menu-links {
+        display: none; /* Ocultar los enlaces por defecto en dispositivos móviles */
+        position: absolute;
+        top: 4em;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .menu-links a {
+        padding: 1em 0; /* Ajustar el padding para que se vean mejor */
+    }
+
+    .menu-links.show {
+        display: flex; /* Mostrar los enlaces cuando se active el menú */
+    }
+}
